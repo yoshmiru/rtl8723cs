@@ -21,7 +21,7 @@
 
 #include <drv_types.h>
 #include <hal_data.h>
-#include <platform_ops.h>
+//#include <platform_ops.h>
 
 #ifndef CONFIG_SDIO_HCI
 #error "CONFIG_SDIO_HCI shall be on!\n"
@@ -74,6 +74,9 @@ static const struct sdio_device_id sdio_ids[] =
 #endif
 	{ /* end: all zeroes */				},
 };
+
+int platform_wifi_power_on(void);
+void platform_wifi_power_off(void);
 
 MODULE_DEVICE_TABLE(sdio, sdio_ids);
 

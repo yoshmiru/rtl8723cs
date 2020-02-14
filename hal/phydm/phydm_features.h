@@ -19,6 +19,7 @@
  ******************************************************************************/
 
 #ifndef	__PHYDM_FEATURES_H__
+#define __PHYDM_FEATURES_H__
 #define __PHYDM_FEATURES
 
 

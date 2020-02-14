@@ -1229,6 +1229,10 @@ phy_GetSecondaryChnl_8703B(
 	}
 
 	RT_TRACE(_module_hal_init_c_, _drv_info_,("SCMapping: SC Value %x \n", ( (SCSettingOf40 << 4) | SCSettingOf20)));
+#if defined(__clang__)
+        // https://bugs.llvm.org/show_bug.cgi?id=42576
+	barrier();
+#endif
 	return  ( (SCSettingOf40 << 4) | SCSettingOf20);
 }
 

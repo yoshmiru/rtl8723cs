@@ -66,7 +66,10 @@ do {\
 } while (0)
 #endif
 #else
+#ifdef RT_TRACE
+#undef RT_TRACE
 #define RT_TRACE(dbgtype, dbgflag, printstr)
+#endif
 #endif
 
 #ifdef CONFIG_BT_COEXIST
